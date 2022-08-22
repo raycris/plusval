@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import DarkLogo from "../assets/images/plusvalLogoDark.png";
 import theme from "../lib/theme";
+import Divider from "./divider";
+
 
 const arrayInfo = [
   {
@@ -30,22 +32,27 @@ const arrayInfo = [
 const Footer = () => {
   return (
     <Container>
-      <ImageContainer>
-        <Image src={DarkLogo} />
-      </ImageContainer>
-      <Parent>
-        {arrayInfo.map((item) => (
-          <InfoContainer>
-            <LabelContainer>
-              <Title>{item.title}</Title>
-              <Label>{item.info.one}</Label>
-              <Label>{item.info.two}</Label>
-              <Label>{item.info.three}</Label>
-              <Label>{item.info.four}</Label>
-            </LabelContainer>
-          </InfoContainer>
-        ))}
-      </Parent>
+      <Allinfo>
+        <ImageContainer>
+          <Image src={DarkLogo} />
+        </ImageContainer>
+
+        <ParentInfoContainer>
+          {arrayInfo.map((item) => (
+            <InfoContainer key={item.id}>
+              <LabelContainer>
+                <Title>{item.title}</Title>
+                <Label>{item.info.one}</Label>
+                <Label>{item.info.two}</Label>
+                <Label>{item.info.three}</Label>
+                <Label>{item.info.four}</Label>
+              </LabelContainer>
+            </InfoContainer>
+          ))}
+        </ParentInfoContainer>
+      </Allinfo>
+   
+   <Divider/>
     </Container>
   );
 };
@@ -55,39 +62,43 @@ export default Footer;
 const Container = styled.footer`
   padding: 0 36px;
   display: flex;
-  max-width: 100%;
+  /* max-width: 100%; */
   min-height: 400px;
   align-items: center;
   justify-content: space-between;
-  background-color: ${theme.color.secundary};
+  /* background-color: ${theme.color.secundary}; */
+  background-color: red;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
-  white-space: normal;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Parent = styled.div`
-  display: flex;
-  max-width: 550px;
-  align-items: flex-start;
+  max-width: 100%;
+  /* align-items: flex-start; */
   white-space: normal;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+`;
+
+const ParentInfoContainer = styled.div`
+  display: flex;
+  max-width: 100%;
+  /* align-items: flex-start; */
+  white-space: normal;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* background-color: red; */
 `;
 
 const LabelContainer = styled.a`
   cursor: pointer;
   margin: 12px;
   display: flex;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   flex-direction: column;
   /* justify-content: flex-start; */
 `;
 
-const Label = styled.text`
+const Label = styled.p`
   color: ${theme.color.white};
   font-size: ${theme.fontSize.normal};
   line-height: 24px;
@@ -103,15 +114,24 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;
 const Image = styled.img`
   max-width: 100%;
 `;
 
-const Title = styled.text`
+const Title = styled.p`
   color: ${theme.color.white};
   font-size: ${theme.fontSize.small};
   line-height: 16px;
   font-weight: 700;
   margin-bottom: 18px;
 `;
+
+const Allinfo = styled.div`
+  /* flex-direction: row; */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+`;
+
