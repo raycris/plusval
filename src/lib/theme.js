@@ -3,6 +3,7 @@ const theme = {
     white: "#FFFFFF",
     primary: "#86c458",
     secundary: "#4c4c4c",
+    laghtGray: "#5d5d5d"
   },
   fontSize: {
     small: "14px",
