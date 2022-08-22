@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import DarkLogo from "../assets/images/plusvalLogoDark.png";
+import theme from "../lib/theme";
 
 const arrayInfo = [
   {
@@ -52,48 +53,48 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.footer`
-padding: 0 36px;
+  padding: 0 36px;
   display: flex;
   max-width: 100%;
   min-height: 400px;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c4c4c;
+  background-color: ${theme.color.secundary};
 `;
 
 const InfoContainer = styled.div`
   display: flex;
   white-space: normal;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 const Parent = styled.div`
-  flex-direction: row;
   display: flex;
   max-width: 550px;
   align-items: flex-start;
-  justify-content: space-between;
   white-space: normal;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const LabelContainer = styled.a`
   cursor: pointer;
-  display: flex;
   margin: 12px;
+  display: flex;
   margin-right: 16px;
   flex-direction: column;
   /* justify-content: flex-start; */
 `;
 
 const Label = styled.text`
-  color: #ffffff;
-  font-size: 16px;
+  color: ${theme.color.white};
+  font-size: ${theme.fontSize.normal};
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 14px;
   &:hover {
-    color: #86c458;
+    color: ${theme.color.primary};
   }
 `;
 
@@ -108,8 +109,8 @@ const Image = styled.img`
 `;
 
 const Title = styled.text`
-  color: #ffffff;
-  font-size: 14px;
+  color: ${theme.color.white};
+  font-size: ${theme.fontSize.small};
   line-height: 16px;
   font-weight: 700;
   margin-bottom: 18px;

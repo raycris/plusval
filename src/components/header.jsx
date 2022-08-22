@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "./button";
 
 import Logo from "../assets/images/plusvalLogo.png";
+import theme from "../lib/theme";
 
 const Header = () => {
   return (
@@ -60,12 +61,12 @@ const LabelContainer = styled.a`
 `;
 
 const Label = styled.p`
-  color: #4c4c4c;
-  font-size: 16px;
+  color: ${theme.color.secundary};
+  font-size: ${theme.fontSize.normal};
   line-height: 24px;
   font-weight: 500;
   &:hover {
-    color: #86c458;
+    color: ${theme.color.primary};
   }
 `;
 
