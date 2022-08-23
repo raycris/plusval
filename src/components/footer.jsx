@@ -5,6 +5,10 @@ import DarkLogo from "../assets/images/plusvalLogoDark.png";
 import theme from "../lib/theme";
 import Divider from "./divider";
 
+import FacebookSVG from "../assets/icons/facebook.svg";
+import IgSVG from "../assets/icons/ig.svg";
+import TwitterSVG from "../assets/icons/twitter.svg";
+import YoutubeSVG from "../assets/icons/youtube.svg";
 
 const arrayInfo = [
   {
@@ -35,6 +39,12 @@ const Footer = () => {
       <Allinfo>
         <ImageContainer>
           <Image src={DarkLogo} />
+          <IconContainer>
+            <Icon src={FacebookSVG} />
+            <Icon src={IgSVG} />
+            <Icon src={TwitterSVG} />
+            <Icon src={YoutubeSVG} />
+          </IconContainer>
         </ImageContainer>
 
         <ParentInfoContainer>
@@ -51,8 +61,20 @@ const Footer = () => {
           ))}
         </ParentInfoContainer>
       </Allinfo>
-   
-   <Divider/>
+
+      <Divider />
+
+      <Allinfo>
+        <InfoLabel>
+          © 2022 Plusval Inmobiliaria. Todos los derechos reservados.
+        </InfoLabel>
+        <InfoLabel>
+          Website por{" "}
+          <NameLink href="https://github.com/raycris" target="_blank">
+            Raycris Maldonado
+          </NameLink>{" "}
+        </InfoLabel>
+      </Allinfo>
     </Container>
   );
 };
@@ -62,47 +84,36 @@ export default Footer;
 const Container = styled.footer`
   padding: 0 36px;
   display: flex;
-  /* max-width: 100%; */
   min-height: 400px;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  /* background-color: ${theme.color.secundary}; */
-  background-color: red;
+  background-color: ${theme.color.secundary};
 `;
 
 const InfoContainer = styled.div`
   display: flex;
   max-width: 100%;
-  /* align-items: flex-start; */
   white-space: normal;
-  flex-direction: row;
-  /* justify-content: space-between; */
 `;
 
 const ParentInfoContainer = styled.div`
   display: flex;
   max-width: 100%;
-  /* align-items: flex-start; */
   white-space: normal;
-  flex-direction: row;
-  /* justify-content: space-between; */
-  /* background-color: red; */
 `;
 
 const LabelContainer = styled.a`
   cursor: pointer;
   margin: 12px;
   display: flex;
-  /* margin-right: 16px; */
   flex-direction: column;
-  /* justify-content: flex-start; */
 `;
 
 const Label = styled.p`
   color: ${theme.color.white};
   font-size: ${theme.fontSize.normal};
   line-height: 24px;
-  font-weight: 500;
   margin-bottom: 14px;
   &:hover {
     color: ${theme.color.primary};
@@ -113,8 +124,8 @@ const ImageContainer = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 `;
 const Image = styled.img`
   max-width: 100%;
@@ -129,9 +140,32 @@ const Title = styled.p`
 `;
 
 const Allinfo = styled.div`
-  /* flex-direction: row; */
-  display: flex;
-  justify-content: space-around;
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 `;
 
+const Icon = styled.img`
+  width: 26px;
+  margin: 0 8px;
+  height: 26px;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const NameLink = styled.a`
+  color: ${theme.color.orage};
+  cursor: pointer;
+  text-decoration: none;
+`;
+
+const InfoLabel = styled.p`
+  color: ${theme.color.white};
+  font-size: ${theme.fontSize.normal};
+  line-height: 24px;
+  margin-bottom: 14px;
+`;

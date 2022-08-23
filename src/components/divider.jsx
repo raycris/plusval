@@ -13,11 +13,12 @@ const Divider = () => {
 export default Divider;
 
 const Container = styled.div`
-  width: 100%;
+  width: 58%;
 `;
 
 const Line = styled.div`
   flex: 1;
   height: 1px;
+  margin-bottom: 50px;
   background-color: ${theme.color.laghtGray};
 `;
