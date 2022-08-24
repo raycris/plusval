@@ -7,6 +7,9 @@ const theme = {
     lightGray: "#5d5d5d",
     lightWhite: "#E7E7E7",
     lightGreen: "#fafff8",
+    hoverGreen: "#77bd43",
+    labelGray: "#767676",
+    SeconLightGreen: "#edf5e8",
   },
   fontSize: {
     base: "18px",
