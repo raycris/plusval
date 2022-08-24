@@ -20,5 +20,5 @@ const Line = styled.div`
   flex: 1;
   height: 1px;
   margin-bottom: 50px;
-  background-color: ${theme.color.laghtGray};
+  background-color: ${theme.color.lightGray};
 `;
