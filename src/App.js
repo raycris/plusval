@@ -19,7 +19,7 @@ function App() {
 
      
 
-      <Footer/>
+      {/* <Footer/> */}
     </Container>
   );
 }
@@ -35,7 +35,7 @@ const Container = styled.div`
 
 const PintureContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 800px;
   display: flex;
   flex-direction: column;
 `;
@@ -47,11 +47,11 @@ const PintureContainer = styled.div`
 //   justify-content: end;
 // `;
 
-const InforContainer = styled.div`
-  height: 900px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: red;
-`;
+// const InforContainer = styled.div`
+//   height: 900px;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: center;
+//   background-color: red;
+// `;
