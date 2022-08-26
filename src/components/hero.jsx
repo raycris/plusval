@@ -59,8 +59,6 @@ const Container = styled.section`
 
 const CardContainer = styled.section`
   height: 100%;
-  /* background-color: ${theme.color.white}; */
-  /* background-color: red; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -75,7 +73,6 @@ const Card = styled.section`
   border-radius: 8px;
   flex-direction: column;
   background-color: ${theme.color.white};
-  /* background-color: blue; */
 `;
 
 const Title = styled.p`
