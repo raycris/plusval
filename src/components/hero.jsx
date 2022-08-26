@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import HERO from "../assets/images/hero.jpg";
+
 import theme from "../lib/theme";
+
+import HERO from "../assets/images/hero.jpg";
+
 import Button from "./button";
+
 import LocationSVG from "../assets/icons/location.svg";
-import MagnifyingGlassSVG from "../assets/icons/magnifying-glass.svg";
 import ButtonFilters from "./buttonFilters";
+import MagnifyingGlassSVG from "../assets/icons/magnifying-glass.svg";
 
 const Hero = () => {
   return (
@@ -39,7 +43,7 @@ const Hero = () => {
             </SearchLabelContainer>
           </SearchContainer>
 
-          <ButtonFilters/>
+          <ButtonFilters />
         </Card>
       </CardContainer>
     </Container>
@@ -51,16 +55,6 @@ export default Hero;
 const Container = styled.section`
   max-width: 100%;
   max-height: 100%;
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-  /* background-image: ${HERO}; */
-`;
-
-const HeroPiture = styled.img`
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
 `;
 
 const CardContainer = styled.section`
@@ -68,20 +62,20 @@ const CardContainer = styled.section`
   /* background-color: ${theme.color.white}; */
   /* background-color: red; */
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const Card = styled.section`
   width: 676px;
   height: 236px;
+  display: flex;
+  padding: 40px;
+  border-radius: 8px;
+  flex-direction: column;
   background-color: ${theme.color.white};
   /* background-color: blue; */
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
 `;
 
 const Title = styled.p`
@@ -91,15 +85,15 @@ const Title = styled.p`
   line-height: 56px;
 `;
 const ButtonContainer = styled.article`
-  border-radius: 68px;
   width: 244px;
   height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  margin-bottom: 16px;
   border: 1px solid ${theme.color.lightWhite};
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  border-radius: 68px;
+  margin-bottom: 26px;
+  justify-content: center;
 `;
 
 const Label = styled.p`
@@ -111,13 +105,13 @@ const Label = styled.p`
 `;
 
 const LabelContainer = styled.span`
-  background-color: ${theme.color.white};
-  border-radius: 68px;
   width: 130px;
   height: 40px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  border-radius: 68px;
+  justify-content: center;
+  background-color: ${theme.color.white};
   cursor: pointer;
   &:hover {
     background-color: ${theme.color.primary};
@@ -131,15 +125,16 @@ const SearchLabel = styled.p`
   color: ${theme.color.white};
   font-size: ${theme.fontSize.normal};
 `;
+
 const SearchLabelContainer = styled.span`
-  background-color: ${theme.color.primary};
-  border-radius: 68px;
   width: 150px;
   height: 44px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 68px;
+  justify-content: space-evenly;
+  background-color: ${theme.color.primary};
   &:hover {
     background-color: ${theme.color.hoverGreen};
   }
@@ -148,12 +143,12 @@ const SearchLabelContainer = styled.span`
 const SearchBar = styled.input`
   width: 100%;
   height: 56px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
   border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+  background-color: transparent;
   &:focus {
     outline: none !important;
   }

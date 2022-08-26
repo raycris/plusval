@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+
 import theme from "../lib/theme";
-import BuildingSVG from "../assets/icons/building.svg";
+
+// import Quantity from "./quantity";
+
 import BedSVG from "../assets/icons/bed.svg";
 import CarSVG from "../assets/icons/car.svg";
 import DollarSVG from "../assets/icons/dollar.svg";
+import BuildingSVG from "../assets/icons/building.svg";
 
 const array = [
   {
@@ -45,6 +49,7 @@ const array = [
   },
 ];
 
+
 const ButtonFilters = () => {
   return (
     <Container>
@@ -71,7 +76,7 @@ const ButtonFilters = () => {
               </ComboBox>
             </ComboBoxContainer>
           ) : (
-            <ComboBoxContainer>
+            <ComboBoxContainer style={{ width: 108 }}>
               <Icon src={item.img} />
               <ComboBox>
                 <ComboOptions selected disabled>
@@ -95,16 +100,15 @@ const Container = styled.section`
   display: flex;
   max-width: 100%;
   max-height: 100%;
-  margin-top: 16px;
+  margin-top: 26px;
   justify-content: space-between;
 `;
 
 const ComboBox = styled.select`
   width: 100%;
-  height: 48px;
+  height: 28px;
   border: none;
   outline: none;
-  /* background-color: transparent; */
 `;
 
 const Icon = styled.img`
@@ -115,11 +119,9 @@ const Icon = styled.img`
 
 const ComboBoxContainer = styled.div`
   display: flex;
-  align-items: center;
-  /* width: 120px; */
   padding: 8px;
-  /* margin: 0 10px; */
-  border-radius: 4px;
+  align-items: center;
+  border-radius: 8px;
   &:hover {
     border: 1px solid ${theme.color.primary};
   }
@@ -136,13 +138,4 @@ const ComboOptions = styled.option`
   &:hover {
     background-color: ${theme.color.primary};
   }
-`;
-const CheckBox = styled.input`
-  &:hover {
-    background: ${theme.color.SeconLightGreen};
-  }
-`;
-
-const Label = styled.label`
-  color: ${theme.color.labelGray};
 `;

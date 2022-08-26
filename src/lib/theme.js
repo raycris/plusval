@@ -4,19 +4,20 @@ const theme = {
     orage: "#e16b31",
     primary: "#86c458",
     secundary: "#4c4c4c",
+    labelGray: "#767676",
     lightGray: "#5d5d5d",
     lightWhite: "#E7E7E7",
     lightGreen: "#fafff8",
     hoverGreen: "#77bd43",
-    labelGray: "#767676",
     SeconLightGreen: "#edf5e8",
   },
   fontSize: {
     base: "18px",
+    title: "46px",
     small: "14px",
     normal: "16px",
     subtitle: "20px",
-    title: "46px",
+    headerLabel: "30px",
   },
 };
 
