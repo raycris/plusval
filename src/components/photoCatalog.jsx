@@ -4,6 +4,8 @@ import styled from "styled-components";
 import theme from "../lib/theme";
 
 import IconButton from "./iconButton";
+import PhotoCarrusel from "./photoCarrusel";
+
 
 import BackArrow from "../assets/images/backArrow.png";
 import FowardArrow from "../assets/images/fowardArrow.png";
@@ -28,6 +30,7 @@ const PhotoCatalog = () => {
           />
         </ButtonContainer>
       </InfoContainer>
+      {/* <PhotoCarrusel/> */}
     </Container>
   );
 };
@@ -37,6 +40,7 @@ export default PhotoCatalog;
 const Container = styled.div`
   display: flex;
   padding: 60px;
+  max-height: 324px;
   background: linear-gradient(
     180deg,
     rgba(83, 160, 25, 0.1) 0%,

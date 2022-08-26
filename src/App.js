@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
+import PhotoCarrusel from "./components/photoCarrusel";
 import PhotoCatalog from "./components/photoCatalog";
 
 
@@ -20,7 +21,7 @@ function App() {
       </InforContainer> */}
 
      <PhotoCatalog/>
-
+<PhotoCarrusel/>
       <Footer/>
     </Container>
   );
