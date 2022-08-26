@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import DarkLogo from "../assets/images/plusvalLogoDark.png";
 import theme from "../lib/theme";
 import Divider from "./divider";
 
-import FacebookSVG from "../assets/icons/facebook.svg";
 import IgSVG from "../assets/icons/ig.svg";
+import DarkLogo from "../assets/images/plusvalLogoDark.png";
 import TwitterSVG from "../assets/icons/twitter.svg";
 import YoutubeSVG from "../assets/icons/youtube.svg";
+import FacebookSVG from "../assets/icons/facebook.svg";
 
 const arrayInfo = [
   {

@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+
+import theme from "../lib/theme";
+
 import Button from "./button";
+import IconButton from "./iconButton";
 
 import Logo from "../assets/images/plusvalLogo.png";
-import theme from "../lib/theme";
+import BurgerMenuSVG from "../assets/icons/burger-menu.svg";
 
 const Header = () => {
   return (
@@ -31,6 +35,7 @@ const Header = () => {
         <LabelContainer>
           <Label>Asociados</Label>
         </LabelContainer>
+        <IconButton kind="outline" icon={BurgerMenuSVG} cursor="pointer" style={{marginRight: 14}} />
         <Button title="Registrate" kind="outline" />
       </ButtonsContainer>
     </Container>

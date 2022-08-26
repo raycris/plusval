@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import theme from "../lib/theme";
+
 import userSVG from "../assets/icons/user.svg";
 
 const Button = ({ ...props }) => {
@@ -18,7 +20,7 @@ const Container = styled.button`
   border: ${(props) =>
     props.kind === "outline" ? `1px solid ${theme.color.primary}` : "none"};
   cursor: pointer;
-  height: 30px;
+  height: 40px;
   display: flex;
   min-width: 150px;
   align-items: center;

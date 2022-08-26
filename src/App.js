@@ -5,6 +5,8 @@ import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
+import PhotoCatalog from "./components/photoCatalog";
+
 
 function App() {
   return (
@@ -17,9 +19,9 @@ function App() {
         klk
       </InforContainer> */}
 
-     
+     <PhotoCatalog/>
 
-      {/* <Footer/> */}
+      <Footer/>
     </Container>
   );
 }
