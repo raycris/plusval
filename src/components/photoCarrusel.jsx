@@ -5,6 +5,7 @@ import theme from "../lib/theme";
 
 import BedSVG from "../assets/icons/bed.svg";
 import LocationSVG from "../assets/icons/location.svg";
+import Partners from "./partners";
 
 const properties = [
   {
@@ -60,38 +61,43 @@ const properties = [
 ];
 const PhotoCarrusel = () => {
   return (
-    <Container>
-      {properties.map((item) => (
-        <PhotoContainer
-          key={item.id}
-          style={{
-            objectFit: "contain",
-            background: ` linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 0, 0, 0.63) 74.17%), url(${item.image})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <LocationContainer>
-            <Icon src={LocationSVG} />
-            <LocationLabel>{item.location}</LocationLabel>
-          </LocationContainer>
-          <InfoContainer>
-            <HouseTitle>{item.buildingName}</HouseTitle>
-            <HouseInfo>
+    <>
+      <Container>
+        {properties.map((item) => (
+          <PhotoContainer
+            key={item.id}
+            style={{
+              objectFit: "contain",
+              background: ` linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 0, 0, 0.63) 74.17%), url(${item.image})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <LocationContainer>
+              <Icon src={LocationSVG} />
+              <LocationLabel>{item.location}</LocationLabel>
+            </LocationContainer>
+            <InfoContainer>
+              <HouseTitle>{item.buildingName}</HouseTitle>
               <HouseInfo>
-                <Icon src={BedSVG} style={{ marginRight: 8 }} />
-                <HouseInfoLabel>{item.roomNum}</HouseInfoLabel>
+                <HouseInfo>
+                  <Icon src={BedSVG} style={{ marginRight: 8 }} />
+                  <HouseInfoLabel>{item.roomNum}</HouseInfoLabel>
+                </HouseInfo>
+                <HouseInfo>
+                  <Icon src={LocationSVG} style={{ marginRight: 8 }} />
+                  <HouseInfoLabel>Desde {item.space} Mts</HouseInfoLabel>
+                </HouseInfo>
               </HouseInfo>
-              <HouseInfo>
-                <Icon src={LocationSVG} style={{ marginRight: 8 }} />
-                <HouseInfoLabel>Desde {item.space} Mts</HouseInfoLabel>
-              </HouseInfo>
-            </HouseInfo>
-            <Price>Desde US${item.price}</Price>
-          </InfoContainer>
-        </PhotoContainer>
-      ))}
-    </Container>
+              <Price>Desde US${item.price}</Price>
+            </InfoContainer>
+          </PhotoContainer>
+        ))}
+      </Container>
+      <PartnersContainer>
+        <Partners />
+      </PartnersContainer>
+    </>
   );
 };
 
@@ -100,8 +106,17 @@ export default PhotoCarrusel;
 const Container = styled.div`
   display: flex;
   padding: 60px;
+  /* top: 100; */
+  /* position: absolute; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+`;
+
+const PartnersContainer = styled.section`
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
 `;
 
 const PhotoContainer = styled.div`

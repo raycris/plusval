@@ -4,11 +4,11 @@ import styled from "styled-components";
 import theme from "../lib/theme";
 
 import IconButton from "./iconButton";
-import PhotoCarrusel from "./photoCarrusel";
 
 
 import BackArrow from "../assets/images/backArrow.png";
 import FowardArrow from "../assets/images/fowardArrow.png";
+import PhotoCarrusel from "./photoCarrusel";
 
 const PhotoCatalog = () => {
   return (
@@ -52,6 +52,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
   border-bottom-style: solid;
+
+
+  /* position: relative; */
 `;
 
 const InfoContainer = styled.div`
