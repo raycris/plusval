@@ -124,6 +124,8 @@ const PhotoContainer = styled.div`
   height: 340px;
   margin: 0 8px;
   cursor: pointer;
+  /* position: absolute;
+  top: 0; */
   padding: 20px;
   display: flex;
   border-radius: 8px;
@@ -184,4 +186,12 @@ const Price = styled.p`
   opacity: 1;
   font-size: ${theme.fontSize.normal};
   font-weight: bold;
+`;
+
+const Line = styled.div`
+  border-color: ${theme.color.lightWhite};
+  border-bottom: 1px;
+  justify-content: space-around;
+  /* position: relative; */
+  border-bottom-style: solid;
 `;

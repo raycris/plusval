@@ -8,7 +8,6 @@ import IconButton from "./iconButton";
 
 import BackArrow from "../assets/images/backArrow.png";
 import FowardArrow from "../assets/images/fowardArrow.png";
-import PhotoCarrusel from "./photoCarrusel";
 
 const PhotoCatalog = () => {
   return (
@@ -30,7 +29,6 @@ const PhotoCatalog = () => {
           />
         </ButtonContainer>
       </InfoContainer>
-      {/* <PhotoCarrusel/> */}
     </Container>
   );
 };
@@ -47,14 +45,8 @@ const Container = styled.div`
     rgba(83, 160, 25, 0) 88.54%
   );
   align-items: center;
-  border-color: ${theme.color.lightWhite};
-  border-bottom: 1px;
   flex-direction: column;
-  justify-content: space-around;
-  border-bottom-style: solid;
-
-
-  /* position: relative; */
+  
 `;
 
 const InfoContainer = styled.div`
