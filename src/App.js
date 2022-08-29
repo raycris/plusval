@@ -8,7 +8,6 @@ import Hero from "./components/hero";
 import PhotoCarrusel from "./components/photoCarrusel";
 import PhotoCatalog from "./components/photoCatalog";
 
-
 function App() {
   return (
     <Container>
@@ -16,13 +15,10 @@ function App() {
         <Header />
         <Hero />
       </PintureContainer>
-      {/* <InforContainer>
-        klk
-      </InforContainer> */}
 
-     <PhotoCatalog/>
-<PhotoCarrusel/>
-      <Footer/>
+      <PhotoCatalog />
+      <PhotoCarrusel />
+      <Footer />
     </Container>
   );
 }
@@ -42,19 +38,3 @@ const PintureContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
-// const FooterContainer = styled.section`
-//   display: flex;
-//   align-items: center;
-//   padding-right: 10px;
-//   justify-content: end;
-// `;
-
-// const InforContainer = styled.div`
-//   height: 900px;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   justify-content: center;
-//   background-color: red;
-// `;
