@@ -80,158 +80,35 @@ const Partners = () => {
         </Description>
       </LabelContainer>
 
-      <ImagenContainer>
-        <Card
-          style={{
-            width: "651px",
-            objectFit: "contain",
-            background: `linear-gradient(
+      <ParentContainer>
+        {people.map((item) => (
+          <ImagenContainer>
+            <Card
+              style={{
+                width: `${item.width}`,
+                objectFit: "contain",
+                background: `linear-gradient(
             180deg,
             rgba(196, 196, 196, 0) 0%,
             rgba(0, 0, 0, 0.63) 74.17%
           ),
-          url(https://i.pinimg.com/originals/be/55/98/be559821d443b3964dce5e11b051e746.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Santo Domingo</CardTitle>
-            <CardStitle>
-              Equipo de + de 120 asesores con especialidad en Santo Domingo.
-            </CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-        <Card
-          style={{
-            width: "456px",
-            background: `linear-gradient(
-            180deg,
-            rgba(196, 196, 196, 0) 0%,
-            rgba(0, 0, 0, 0.63) 74.17%
-          ),
-          url(https://i.pinimg.com/originals/26/95/4b/26954bc88fe97df8137939d0389ebbec.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Punta Cana</CardTitle>
-            <CardStitle>
-              Equipo de + de 30 asesores con especialidad en ;a region Este.
-            </CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-      </ImagenContainer>
-      <ImagenContainer>
-        <Card
-          style={{
-            width: "554px",
-            background: `linear-gradient(
-            180deg,
-            rgba(196, 196, 196, 0) 0%,
-            rgba(0, 0, 0, 0.63) 74.17%
-          ),
-          url(https://i.pinimg.com/originals/e1/e5/23/e1e523f2333f5116a27a982d22e786e6.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Venta Directa</CardTitle>
-            <CardStitle>
-              Equipo de + de 50 asesores con especialidad en el Distrito
-              Nacional.
-            </CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-        <Card
-          style={{
-            width: "554px",
-            objectFit: "contain",
-            background: `linear-gradient(
-            180deg,
-            rgba(196, 196, 196, 0) 0%,
-            rgba(0, 0, 0, 0.63) 74.17%
-          ),
-          url(https://i.pinimg.com/originals/0d/43/4b/0d434b919d7f3090ad60cf55a70839ea.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Puente Azul</CardTitle>
-            <CardStitle>
-              Equipo de + de 40 asesores con especialidad en Santo Domingo Este
-              y Oeste.
-            </CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-      </ImagenContainer>
-      <ImagenContainer>
-        <Card
-          style={{
-            width: "456px",
-            background: `linear-gradient(
-            180deg,
-            rgba(196, 196, 196, 0) 0%,
-            rgba(0, 0, 0, 0.63) 74.17%
-          ),
-          url(https://i.pinimg.com/originals/97/4d/d0/974dd0bebe10c029ad363cf4ae66a3af.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Comercial</CardTitle>
-            <CardStitle>Local comerciales y negocios.</CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-        <Card
-          style={{
-            width: "651px",
-            background: `linear-gradient(
-            180deg,
-            rgba(196, 196, 196, 0) 0%,
-            rgba(0, 0, 0, 0.63) 74.17%
-          ),
-          url(https://i.pinimg.com/originals/a1/96/c2/a196c275f4033795ae2077074adec96e.jpg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <CardInfo>
-            <CardTitle>Plusval Norte</CardTitle>
-            <CardStitle>
-              Equipo de + de 25 asesores con especialidad en la region norte.
-            </CardStitle>
-            <CardButton>
-              <ButtonLabel>CONECE MAS</ButtonLabel>
-              <Icon src={Arrow} />
-            </CardButton>
-          </CardInfo>
-        </Card>
-      </ImagenContainer>
+          url(${item.image})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <CardInfo>
+                <CardTitle>{item.title}</CardTitle>
+                <CardStitle>{item.subtitle}</CardStitle>
+                <CardButton>
+                  <ButtonLabel>CONECE MAS</ButtonLabel>
+                  <Icon src={Arrow} />
+                </CardButton>
+              </CardInfo>
+            </Card>
+          </ImagenContainer>
+        ))}
+      </ParentContainer>
     </Container>
   );
 };
@@ -249,6 +126,14 @@ const Container = styled.div`
   align-items: center;
   border-radius: 32px;
   flex-direction: column;
+  justify-content: center;
+`;
+
+const ParentContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
   justify-content: center;
 `;
 
@@ -270,7 +155,7 @@ const LabelContainer = styled.div`
 `;
 const ImagenContainer = styled.div`
   gap: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 10px;
   display: grid;
   flex-wrap: wrap;
   grid-auto-flow: column;

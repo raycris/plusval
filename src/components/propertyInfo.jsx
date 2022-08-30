@@ -106,12 +106,12 @@ const ParentContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const InfoContainer = styled.div`
   margin: 16px;
-  width: 330px;
+  width: 430px;
   height: 248px;
   display: flex;
   align-items: flex-start;
