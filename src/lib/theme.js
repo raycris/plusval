@@ -2,6 +2,7 @@ const theme = {
   color: {
     white: "#FFFFFF",
     orage: "#e16b31",
+    black: "#000000",
     primary: "#86c458",
     secundary: "#4c4c4c",
     labelGray: "#767676",

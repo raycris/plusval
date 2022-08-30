@@ -5,7 +5,7 @@ import theme from "../lib/theme";
 
 import HERO from "../assets/images/hero.jpg";
 
-import Button from "./button";
+// import Button from "./button";
 
 import LocationSVG from "../assets/icons/location.svg";
 import ButtonFilters from "./buttonFilters";

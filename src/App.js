@@ -7,6 +7,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import PhotoCarrusel from "./components/photoCarrusel";
 import PhotoCatalog from "./components/photoCatalog";
+import PropertyInfo from "./components/propertyInfo";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
       <PhotoCatalog />
       <PhotoCarrusel />
+      <PropertyInfo />
       <Footer />
     </Container>
   );
