@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "./App.css";
+import ClientOpinions from "./components/clientOpinions";
 import Footer from "./components/footer";
 
 import Header from "./components/header";
@@ -20,6 +21,7 @@ function App() {
       <PhotoCatalog />
       <PhotoCarrusel />
       <PropertyInfo />
+      <ClientOpinions/>
       <Footer />
     </Container>
   );

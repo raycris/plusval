@@ -7,6 +7,7 @@ const theme = {
     secundary: "#4c4c4c",
     labelGray: "#767676",
     lightGray: "#5d5d5d",
+    darkGreen: "#53a019",
     lightWhite: "#E7E7E7",
     lightGreen: "#fafff8",
     hoverGreen: "#77bd43",
