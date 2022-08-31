@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
+import Locations from "./components/locations";
 import PhotoCarrusel from "./components/photoCarrusel";
 import PhotoCatalog from "./components/photoCatalog";
 import PropertyInfo from "./components/propertyInfo";
@@ -22,6 +23,7 @@ function App() {
       <PhotoCarrusel />
       <PropertyInfo />
       <ClientOpinions/>
+      <Locations/>
       <Footer />
     </Container>
   );
