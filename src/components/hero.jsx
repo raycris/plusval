@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import theme from "../lib/theme";
 
 import HERO from "../assets/images/hero.jpg";
 
-// import Button from "./button";
-
 import LocationSVG from "../assets/icons/location.svg";
 import ButtonFilters from "./buttonFilters";
 import MagnifyingGlassSVG from "../assets/icons/magnifying-glass.svg";
 
 const Hero = () => {
+  const [colorButton, setColorButton] = useState(false);
+
+  const handlerChange = () => {
+    setColorButton(!colorButton);
+  };
+
   return (
     <Container
       style={{
@@ -26,11 +30,31 @@ const Hero = () => {
         <Title>¡Encuentra tu próximo Inmueble!</Title>
         <Card>
           <ButtonContainer>
-            <LabelContainer>
-              <Label>COMPRAR</Label>
+            <LabelContainer
+              onClick={handlerChange}
+              style={{
+                background:
+                  colorButton === true
+                    ? `${theme.color.darkGreen}`
+                    : `${theme.color.white}`,
+              }}
+            >
+              <Label style={{ color: colorButton && `${theme.color.white}` }}>
+                COMPRAR
+              </Label>
             </LabelContainer>
-            <LabelContainer>
-              <Label>ALQUILAR</Label>
+            <LabelContainer
+              onClick={handlerChange}
+              style={{
+                background:
+                  colorButton === true
+                    ? `${theme.color.white}`
+                    : `${theme.color.darkGreen}`,
+              }}
+            >
+              <Label style={{ color: !colorButton && `${theme.color.white}` }}>
+                ALQUILAR
+              </Label>
             </LabelContainer>
           </ButtonContainer>
 
@@ -96,9 +120,6 @@ const ButtonContainer = styled.article`
 const Label = styled.p`
   color: ${theme.color.primary};
   font-size: ${theme.fontSize.normal};
-  &:hover {
-    color: ${theme.color.white};
-  }
 `;
 
 const LabelContainer = styled.span`
@@ -108,13 +129,12 @@ const LabelContainer = styled.span`
   align-items: center;
   border-radius: 68px;
   justify-content: center;
-  background-color: ${theme.color.white};
   cursor: pointer;
   &:hover {
-    background-color: ${theme.color.primary};
+    background-color: ${theme.color.darkGreen};
   }
   &:focus {
-    background: ${theme.color.primary};
+    background: ${theme.color.darkGreen};
   }
 `;
 
@@ -131,7 +151,7 @@ const SearchLabelContainer = styled.span`
   align-items: center;
   border-radius: 68px;
   justify-content: space-evenly;
-  background-color: ${theme.color.primary};
+  background-color: ${theme.color.darkGreen};
   &:hover {
     background-color: ${theme.color.hoverGreen};
   }

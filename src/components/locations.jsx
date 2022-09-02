@@ -104,7 +104,8 @@ const Description = styled.p`
   font-size: ${theme.fontSize.normal};
 `;
 
-const ContactContainer = styled.div`
+const ContactContainer = styled.a`
+  cursor: pointer;
   display: flex;
   align-items: center;
   margin-bottom: 6px;

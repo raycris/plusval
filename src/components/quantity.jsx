@@ -45,7 +45,6 @@ const NumberContainer = styled.div`
   justify-content: center;
   border-left: 1px;
   border-radius: 4px;
-  /* border: 1px solid ${theme.color.secundary}; */
   background-color: blue;
   &:hover :focus {
     ${theme.color.primary};

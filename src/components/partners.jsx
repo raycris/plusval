@@ -173,6 +173,7 @@ const CardInfo = styled.div`
   display: flex;
   padding: 16px;
   flex-direction: column;
+  justify-content: flex-end;
 `;
 
 const CardTitle = styled.h3`
@@ -194,7 +195,7 @@ const CardButton = styled.button`
   height: 2rem;
   cursor: pointer;
   display: flex;
-  background: ${theme.color.primary};
+  background: ${theme.color.darkGreen};
   align-items: center;
   border-radius: 16px;
   justify-content: center;
