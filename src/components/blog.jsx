@@ -35,8 +35,6 @@ const cardInfo = [
 const Blog = () => {
   return (
     <Container>
-      {/* <Parent> */}
-
       <InfoContainer>
         <HeadContainer>
           <LabelContainer>
@@ -72,7 +70,6 @@ const Blog = () => {
           ))}
         </PhotoContainer>
       </InfoContainer>
-      {/* </Parent> */}
     </Container>
   );
 };
@@ -86,9 +83,6 @@ const Container = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* position: relative;
-  background-color: black; */
-  /* height: 900px; */
   background: linear-gradient(
     180deg,
     rgba(83, 160, 25, 0.1) 0%,
@@ -96,35 +90,18 @@ const Container = styled.section`
   );
 `;
 
-const Parent = styled.div`
-background: linear-gradient(
-    180deg,
-    rgba(83, 160, 25, 0.1) 0%,
-    rgba(83, 160, 25, 0) 88.54%
-  );
-/* height: 50%; */
-display: flex;
-
-`
-
 const InfoContainer = styled.div`
   width: 66%;
   height: 400px;
   display: flex;
-  /* margin: 20px; */
   flex-direction: column;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  /* align-items: flex-end; */
-  
-  /* background-color: red; */
 `;
 const LabelContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  
 `;
 
 const Title = styled.h2`
@@ -162,8 +139,6 @@ const Icon = styled.img`
 const PhotoContainer = styled.section`
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  /* background-color: aquamarine; */
 `;
 const Photo = styled.a`
   height: 228px;

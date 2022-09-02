@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Locations from "./components/locations";
+import Opinion from "./components/opinion";
 import PhotoCarrusel from "./components/photoCarrusel";
 import PhotoCatalog from "./components/photoCatalog";
 import PropertyInfo from "./components/propertyInfo";
@@ -24,6 +25,7 @@ function App() {
       <PhotoCarrusel />
       <PropertyInfo />
       <ClientOpinions/>
+      <Opinion/>
       <Blog/>
       <Locations/>
       <Footer />
