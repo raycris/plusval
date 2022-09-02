@@ -52,6 +52,7 @@ const Blog = () => {
         <PhotoContainer>
           {cardInfo.map((item) => (
             <Photo
+            key={item.id}
               style={{
                 width: `${item.width}`,
                 bjectFit: "contain",
@@ -120,7 +121,7 @@ const CardButton = styled.button`
   height: 40px;
   cursor: pointer;
   display: flex;
-  background: ${theme.color.primary};
+  background: ${theme.color.darkGreen};
   align-items: center;
   border-radius: 16px;
   justify-content: center;

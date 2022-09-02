@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 import theme from "../lib/theme";
 
-// import Quantity from "./quantity";
-
 import BedSVG from "../assets/icons/bed.svg";
 import CarSVG from "../assets/icons/car.svg";
 import DollarSVG from "../assets/icons/dollar.svg";
@@ -76,7 +74,7 @@ const ButtonFilters = () => {
               </ComboBox>
             </ComboBoxContainer>
           ) : (
-            <ComboBoxContainer style={{ width: 108 }}>
+            <ComboBoxContainer style={{ width: 108 }} key={item.title}>
               <Icon src={item.img} />
               <ComboBox>
                 <ComboOptions selected disabled>
