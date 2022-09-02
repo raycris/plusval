@@ -12,42 +12,44 @@ import FowardArrow from "../assets/images/fowardArrow.png";
 const Opinion = () => {
   return (
     <Container>
-      <Parent>
-        <DateContainer>
-          <Start />|<DateLabel> 2019-12-05</DateLabel>
-        </DateContainer>
-        <PostTitle>Super, Excelente</PostTitle>
-        <Line />
+      <ParentContainer>
+        <CardContainer>
+          <DateContainer>
+            <Start />|<DateLabel>2019-12-05</DateLabel>
+          </DateContainer>
+          <PostTitle>Super, Excelente</PostTitle>
+          <Line />
 
-        <DateContainer>
-          <People src="https://i.pinimg.com/originals/26/95/4b/26954bc88fe97df8137939d0389ebbec.jpg" />
-          <PeopleInfo>
-            <PeopleName>Manny Glez</PeopleName>
-            <DateContainer>
-              <Description>Testimonio sobre </Description>
-              <PeopleRecomendation> Francesca Bonnelly</PeopleRecomendation>
-            </DateContainer>
-          </PeopleInfo>
-        </DateContainer>
+          <DateContainer>
+            <People src="https://i.pinimg.com/originals/26/95/4b/26954bc88fe97df8137939d0389ebbec.jpg" />
+            <PeopleInfo>
+              <PeopleName>Manny Glez</PeopleName>
+              <DateContainer>
+                <Description>Testimonio sobre </Description>
+                <PeopleRecomendation> Francesca Bonnelly</PeopleRecomendation>
+              </DateContainer>
+            </PeopleInfo>
+          </DateContainer>
 
-        <FooterContent>
-          <ButtonContainer>
-            <IconButton kind="outline" icon={BackArrow} cursor="pointer" />
-            <IconButton
-              kind="outline"
-              icon={FowardArrow}
-              cursor="pointer"
-              style={{ marginLeft: 8 }}
-            />
-          </ButtonContainer>
+          <FooterContent>
+            <ButtonContainer>
+              <IconButton kind="outline" icon={BackArrow} cursor="pointer" />
+              <IconButton
+                kind="outline"
+                icon={FowardArrow}
+                cursor="pointer"
+                style={{ marginLeft: 8 }}
+              />
+            </ButtonContainer>
 
-          <Line style={{ width: "100%", marginLeft:10 }} />
-        </FooterContent>
-      </Parent>
+            <Line style={{ width: "100%", marginLeft: 10 }} />
+          </FooterContent>
+        </CardContainer>
 
-      <Publicity>
-        <Description>PUBLICIDAD</Description>
-      </Publicity>
+        <Publicity>
+          <Description>PUBLICIDAD</Description>
+        </Publicity>
+      </ParentContainer>
     </Container>
   );
 };
@@ -59,13 +61,20 @@ const Container = styled.section`
   display: flex;
   padding: 40px;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
 `;
-const Parent = styled.section`
+const CardContainer = styled.section`
   width: 450px;
   display: flex;
   padding: 0 40px;
   flex-direction: column;
+`;
+
+const ParentContainer = styled.div`
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 `;
 
 const DateContainer = styled.div`

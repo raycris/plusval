@@ -5,7 +5,9 @@ import theme from "../lib/theme";
 
 import BedSVG from "../assets/icons/bed.svg";
 import LocationSVG from "../assets/icons/location.svg";
+
 import Partners from "./partners";
+import StickeLocation from "./stickeLocation";
 
 const properties = [
   {
@@ -73,10 +75,7 @@ const PhotoCarrusel = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <LocationContainer>
-              <Icon src={LocationSVG} />
-              <LocationLabel>{item.location}</LocationLabel>
-            </LocationContainer>
+            <StickeLocation icon={LocationSVG} withIcon title={item.location} />
             <InfoContainer>
               <HouseTitle>{item.buildingName}</HouseTitle>
               <HouseInfo>
@@ -106,10 +105,6 @@ export default PhotoCarrusel;
 const Container = styled.div`
   display: flex;
   padding: 60px;
-  /* top: 100; */
-  /* position: absolute; */
-  /* align-items: center; */
-  /* justify-content: space-around; */
 `;
 
 const PartnersContainer = styled.section`
@@ -124,8 +119,6 @@ const PhotoContainer = styled.div`
   height: 340px;
   margin: 0 8px;
   cursor: pointer;
-  /* position: absolute;
-  top: 0; */
   padding: 20px;
   display: flex;
   border-radius: 8px;
@@ -133,22 +126,6 @@ const PhotoContainer = styled.div`
   justify-content: space-between;
 `;
 
-const LocationContainer = styled.section`
-  width: 62px;
-  height: 22px;
-  display: flex;
-  opacity: 0.7;
-  padding: 8px;
-  align-items: center;
-  border-radius: 4px;
-  justify-content: space-around;
-  background-color: ${theme.color.labelGray};
-`;
-
-const LocationLabel = styled.p`
-  color: ${theme.color.white};
-  font-size: ${theme.fontSize.small};
-`;
 const Icon = styled.img`
   width: 16px;
   height: 16px;
@@ -186,12 +163,4 @@ const Price = styled.p`
   opacity: 1;
   font-size: ${theme.fontSize.normal};
   font-weight: bold;
-`;
-
-const Line = styled.div`
-  border-color: ${theme.color.lightWhite};
-  border-bottom: 1px;
-  justify-content: space-around;
-  /* position: relative; */
-  border-bottom-style: solid;
 `;

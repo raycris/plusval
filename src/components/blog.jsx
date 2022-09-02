@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../lib/theme";
 
 import Arrow from "../assets/images/fowardArrow.png";
+import StickeLocation from "./stickeLocation";
 
 const cardInfo = [
   {
@@ -62,9 +63,8 @@ const Blog = () => {
                 url(${item.image})`,
               }}
             >
-              <LocationContainer>
-                <LocationLabel>Bienes Raices</LocationLabel>
-              </LocationContainer>
+             
+              <StickeLocation title="Bienes Raices"/>
               <PhotoLabel>Plusval destaca en feria NY</PhotoLabel>
             </Photo>
           ))}
@@ -156,23 +156,6 @@ const PhotoLabel = styled.h3`
   font-size: 26px;
   margin: 0;
   font-weight: bold;
-`;
-
-const LocationContainer = styled.section`
-  width: 92px;
-  height: 22px;
-  display: flex;
-  opacity: 0.7;
-  padding: 8px;
-  align-items: center;
-  border-radius: 4px;
-  justify-content: space-around;
-  background-color: ${theme.color.labelGray};
-`;
-
-const LocationLabel = styled.p`
-  color: ${theme.color.white};
-  font-size: ${theme.fontSize.small};
 `;
 
 const HeadContainer = styled.div`
