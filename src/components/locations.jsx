@@ -108,7 +108,6 @@ const ContactContainer = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
   justify-content: center;
 `;
 
@@ -118,8 +117,9 @@ const Icon = styled.img`
   margin-right: 8px;
 `;
 
-const LabelContact = styled.a`
+const LabelContact = styled.p`
   color: ${theme.color.primary};
+  margin: 4px;
   font-size: ${theme.fontSize.normal};
 `;
 
@@ -127,5 +127,5 @@ const Line = styled.div`
   width: 100%;
   height: 1px;
   margin-bottom: 20px;
-  background-color: rgba(118, 118, 118, 0.4);
+  border-bottom: 1px solid rgba(118, 118, 118, 0.4);
 `;

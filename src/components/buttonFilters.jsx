@@ -74,7 +74,7 @@ const ButtonFilters = () => {
               </ComboBox>
             </ComboBoxContainer>
           ) : (
-            <ComboBoxContainer style={{ width: 108 }} key={item.id}>
+            <ComboBoxContainer style={{ width: 108 }} key={item.title}>
               <Icon src={item.img} />
               <ComboBox>
                 <ComboOptions selected disabled>

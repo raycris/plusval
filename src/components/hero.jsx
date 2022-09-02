@@ -12,10 +12,6 @@ import MagnifyingGlassSVG from "../assets/icons/magnifying-glass.svg";
 const Hero = () => {
   const [colorButton, setColorButton] = useState(false);
 
-  const handlerChange = () => {
-    setColorButton(!colorButton);
-  };
-
   return (
     <Container
       style={{
@@ -31,12 +27,11 @@ const Hero = () => {
         <Card>
           <ButtonContainer>
             <LabelContainer
-              onClick={handlerChange}
+              onClick={() => setColorButton(true)}
               style={{
-                background:
-                  colorButton === true
-                    ? `${theme.color.darkGreen}`
-                    : `${theme.color.white}`,
+                background: colorButton
+                  ? `${theme.color.darkGreen}`
+                  : `${theme.color.white}`,
               }}
             >
               <Label style={{ color: colorButton && `${theme.color.white}` }}>
@@ -44,12 +39,11 @@ const Hero = () => {
               </Label>
             </LabelContainer>
             <LabelContainer
-              onClick={handlerChange}
+              onClick={() => setColorButton(false)}
               style={{
-                background:
-                  colorButton === true
-                    ? `${theme.color.white}`
-                    : `${theme.color.darkGreen}`,
+                background: colorButton
+                  ? `${theme.color.white}`
+                  : `${theme.color.darkGreen}`,
               }}
             >
               <Label style={{ color: !colorButton && `${theme.color.white}` }}>
@@ -124,14 +118,15 @@ const Label = styled.p`
 
 const LabelContainer = styled.span`
   width: 130px;
+  cursor: pointer;
   height: 40px;
   display: flex;
   align-items: center;
   border-radius: 68px;
   justify-content: center;
-  cursor: pointer;
   &:hover {
-    background-color: ${theme.color.darkGreen};
+    /* background-color: ${theme.color.darkGreen}; */
+    background-color: red;
   }
   &:focus {
     background: ${theme.color.darkGreen};
